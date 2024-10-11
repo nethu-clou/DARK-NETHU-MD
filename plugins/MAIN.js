@@ -77,7 +77,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 > ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ`;
 
-        const vv = await conn.sendMessage(from, { image: { url: "https://iili.io/dbFAKoG.jpg"}, caption: desc }, { quoted: mek });
+        const vv = await conn.sendMessage(from, { image: { url: "https://iili.io/29wAvDu.jpg"}, caption: desc }, { quoted: mek });
 
         conn.ev.on('messages.upsert', async (msgUpdate) => {
             const msg = msgUpdate.messages[0];
@@ -333,28 +333,30 @@ let status =`
     
 > ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ
 `
-const imageUrl='https://iili.io/dbFAKoG.jpg';
+const imageUrl='https://iili.io/29wAvDu.jpg';
     await conn.sendMessage(from,{image:{url:imageUrl},caption:status},{quoted:mek||null})}catch(e){console.log(e);reply(`Error: ${e}`);}});
 //=================== ping command =======================
 
+
 cmd({
     pattern: "ping",
-    desc: "Check bot's response time.",
-    category: "main",
     react: "⚡",
+    alias: ["speed"],
+    desc: "Check bot\'s ping",
+    category: "main",
+    use: '.ping',
     filename: __filename
 },
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
-        const startTime = Date.now()
-        const message = await conn.sendMessage(from, { text: '𝘕𝘌𝘛𝘏𝘜 𝘔𝘋...' })
-        const endTime = Date.now()
-        const ping = endTime - startTime
-        await conn.sendMessage(from, { text: `*📍 Pong : ${ping}ms*` }, { quoted: message })
-    } catch (e) {
-        console.log(e)
-        reply(`${e}`)
-    }
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+var inital = new Date().getTime();
+let ping = await conn.sendMessage(from , { text: '```Pinging To index.js!!!```'  }, { quoted: mek } )
+var final = new Date().getTime();
+return await conn.edit(ping, '*📍 Pong*\n *' + (final - inital) + ' ms* ' )
+} catch (e) {
+reply(`${e}`)
+console.log(e)
+}
 })
 
 //================ run time ======================
@@ -414,7 +416,7 @@ let about = ` *👋 𝗛𝗘𝗟𝗟𝗢 𝗧𝗛𝗘𝗜𝗥 ${senderNumber}*
               
 > ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ`
 
-return await conn.sendMessage(from,{image: {url: `https://iili.io/dbFAKoG.jpg`},caption:about},{quoted: mek})
+return await conn.sendMessage(from,{image: {url: `https://iili.io/29wAvDu.jpg`},caption:about},{quoted: mek})
 
 }catch(e){
 
@@ -460,7 +462,7 @@ let about = ` *👋 Hello ${pushname}*
 
 > ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ`
 
-return await conn.sendMessage(from,{image: {url: `https://iili.io/dbFAKoG.jpg`},caption:about},{quoted: mek})
+return await conn.sendMessage(from,{image: {url: `https://iili.io/29wAvDu.jpg`},caption:about},{quoted: mek})
 
 }catch(e){
 
@@ -567,7 +569,7 @@ let madeMenu = `
 
 > ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ`
 
-return await conn.sendMessage(from,{image: {url: `https://iili.io/dbFAKoG.jpg`},caption:madeMenu},{quoted: mek})
+return await conn.sendMessage(from,{image: {url: `https://iili.io/29wAvDu.jpg`},caption:madeMenu},{quoted: mek})
 }catch(e){
 console.log(e)
 reply(`𝔼𝕣𝕣𝕣𝕠𝕣`)
