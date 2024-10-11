@@ -11,7 +11,7 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
    <p align="center">
 <a href="https://github.com/nethu-main">
-    <img src="https://imgtr.ee/images/2024/09/17/37f9be869d1404ef1a5d188178450537.jpeg" width="700px">
+    <img src="https://iili.io/H0ZrUHx.jpg" width="700px">
   </a>
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
