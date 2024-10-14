@@ -32,7 +32,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
     for (const text in data) {
         if (body.toLowerCase() === text.toLowerCase()) {
             const config = await readEnv();
-            if (config.AUTO_STICKER === 'false') {
+            if (config.AUTO_STICKER === 'true') {
                 //if (isOwner) return;        
                 await conn.sendMessage(from,{sticker: { url : data[text]},package: 'yourName'},{ quoted: mek })   
             
@@ -51,7 +51,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
     for (const text in data) {
         if (body.toLowerCase() === text.toLowerCase()) {
             const config = await readEnv();
-            if (config.AUTO_REPLY === 'false') {
+            if (config.AUTO_REPLY === 'true') {
                 //if (isOwner) return;        
                 await m.reply(data[text])
             

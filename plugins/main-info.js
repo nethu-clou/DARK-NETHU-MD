@@ -31,28 +31,7 @@ let des = `*👋 Hello ${pushname} I'm alive now*
 🌟 𝕋𝕪𝕡𝕖 .𝕞𝕖𝕟𝕦 𝕋𝕠 𝔾𝕖𝕥 𝔹𝕠𝕥 𝕌𝕤𝕖𝕣 𝕄𝕖𝕟𝕦
 
 > 𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 - : © ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ 2024 
-`
-
-    conn.sendMessage(m.chat, {
-      text: str,
-      contextInfo: {
-      
-      mentionedJid: [m.sender],
-      isForwarded: true,
-            forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363343441743645@g.us',
-                newsletterName: global.author,
-                serverMessageId: -1
-            },
-      forwardingScore: 999,
-      externalAdReply: {
-      title: "❖ DARK NETHU MD ❖",
-      body: "Bot Info",
-      thumbnailUrl: pp,
-      sourceUrl: '',
-      mediaType: 1,
-      renderLargerThumbnail: false
-          
+`        
 return await conn.sendMessage(from,{image: {url: config.ALIVE_IMG},caption: des},{quoted: mek})
 }catch(e){
 console.log(e)
