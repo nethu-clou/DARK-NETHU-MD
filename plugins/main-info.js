@@ -46,7 +46,7 @@ let des = `*👋 Hello ${pushname} I'm alive now*
             },
       forwardingScore: 999,
       externalAdReply: {
-      title: "💝Qᴜᴇᴇɴ-ꜱʜᴇɴᴀʟɪ-ᴍᴅ💝",
+      title: "❖ DARK NETHU MD ❖",
       body: "Bot Info",
       thumbnailUrl: pp,
       sourceUrl: '',
